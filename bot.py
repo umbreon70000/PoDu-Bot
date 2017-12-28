@@ -29,7 +29,7 @@ async def on_message(message):
     if message.content.startswith(',tauros'):
         await client.send_message(message.channel, "`Take Down - The purple is also an option, however the purple allows the opponent to choose where to move, which could sometimes help them.`")
     if message.content.startswith(',blaziken'):
-        await client.send_message(message.channel, "`Flare Blitz and Cycle Kick - Both of these moves are very powerful, and if this Pokemon has evolved from Combusken, these moves become even more powerful. Sometimes you will want Blaziken to hit Purple, and other times White, so I would suggest at level 10 having 5 points on Flare Blitz and 4 points on Cyclone Kick.`")
+        await client.send_message(message.channel, "`Flare Blitz and Cyclone Kick - Both of these moves are very powerful, and if this Pokemon has evolved from Combusken, these moves become even more powerful. Sometimes you will want Blaziken to hit Purple, and other times White, so I would suggest at level 10 having 5 points on Flare Blitz and 4 points on Cyclone Kick.`")
     if message.content.startswith(',kyogre'):
         await client.send_message(message.channel, "`Hydro Pump - Kyogre will usually only be used in a Manaphy Deck, and with the damage buff from Manaphy, this move can Deal 150 damage, which can defeat most figures in meta.`")
     if message.content.startswith(',charizard'):
