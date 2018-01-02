@@ -276,6 +276,8 @@ async def on_message(message):
     if message.content.startswith(',myname'):
         myname = message.author.name
         await client.send_message(message.channel, myname)
+    if message.content.startswith(',test'):
+        await client.send_message(message.channel, "Test")
 
     # if message.content.startswith(',guess'):
     #     game=True
