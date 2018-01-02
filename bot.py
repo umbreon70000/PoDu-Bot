@@ -282,12 +282,12 @@ async def on_message(message):
     if message.content.startswith(',event'):
         #JAN 10 2018 7:59PM
         utc = datetime.utcnow()
-        # s = t.strftime('%Y-%m-%d %H:%M:%S.%f')
+        s = t.strftime('%Y-%m-%d %H:%M:%S')
         # utcTime = s[:-7] #Removing the milliseconds
         eventTime = '2018-01-10 19:59:00'
-        FMT = '%Y-%m-%d %H:%M:%S'
-        tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(utc, FMT)
-        await client.send_message(message.channel, tdelta)
+        # FMT = '%Y-%m-%d %H:%M:%S'
+        eventDif = eventTime - utc
+        await client.send_message(message.channel, eventDif)
 
 
 ##########################################
