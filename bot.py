@@ -18,7 +18,7 @@ async def on_message(message):
     ################
     ##### HELP #####
     ################
-    if message.content.startswith(',deoxys-a'):
+    if message.content.startswith(',help'):
         helpMsg = "Hello there."
         await client.send_message(client.get_user_info(id), helpMsg)
 
