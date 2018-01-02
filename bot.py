@@ -15,6 +15,16 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    ################
+    ##### HELP #####
+    ################
+    if message.content.startswith(',deoxys-a'):
+        helpMsg = "Hello there."
+        await client.send_message(client.get_user_info(id), helpMsg)
+
+    ##################
+    ##### LEVELS #####
+    ##################
     if message.content.startswith(',deoxys-a'):
         await client.send_message(message.channel, "`Psycho Boost - This is one of the most reliable White Attacks in Duel`")
     if message.content.startswith(',cobalion'):
