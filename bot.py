@@ -275,7 +275,7 @@ async def on_message(message):
 ##########################################
     if message.content.startswith(',time'):
         utcTime = datetime.utcnow()
-        await client.send_message(message.channel, myname)
+        await client.send_message(message.channel, utcTime)
 
 ##########################################
 ###############Credit System##############
