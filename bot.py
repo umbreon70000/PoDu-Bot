@@ -274,7 +274,9 @@ async def on_message(message):
 ###############Event Duration#############
 ##########################################
     if message.content.startswith(',time'):
-        utcTime = datetime.utcnow()
+        t = datetime.utcnow()
+        s = t.strftime('%Y-%m-%d %H:%M:%S.%f')
+        utcTime = s[:-3]
         await client.send_message(message.channel, utcTime)
 
 ##########################################
