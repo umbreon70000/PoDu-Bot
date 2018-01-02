@@ -284,7 +284,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-01-04 19:59:00'
+        eventTime = '2018-01-04 07:59:00'
         FMT = '%Y-%m-%d %H:%M:%S'
         tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
         await client.send_message(message.channel, tdelta)
