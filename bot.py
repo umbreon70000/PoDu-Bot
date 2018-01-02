@@ -177,9 +177,9 @@ async def on_message(message):
     if message.content.startswith(',cosmo'):
         await client.send_message(message.channel, "Broken")
     if message.content.startswith(',car'):
-        await client.send_message(message.channel, "Yes, I will provide pictures of cars for you soon Sfpm... Feelsbad")
+        await client.send_message(message.channel, "Yes, I will provide pictures of cars for you soon Sfpm")
     if message.content.startswith(',food'):
-        await client.send_message(message.channel, "If only Umbreon could actually type...")
+        await client.send_message(message.channel, "If only Umbreon could type...")
     if message.content.startswith(',4k'):
         await client.send_message(message.channel, "R Clan requirement")
 
@@ -277,7 +277,7 @@ async def on_message(message):
         myname = message.author.name
         await client.send_message(message.channel, myname)
     if message.content.startswith(',test'):
-        await client.send_message(message.channel, "Test")
+        await client.send_message(message.channel, "Test2")
 
     # if message.content.startswith(',guess'):
     #     game=True
