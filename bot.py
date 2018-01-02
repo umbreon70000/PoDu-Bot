@@ -2,6 +2,7 @@ import discord
 import asyncio
 import random
 import sqlite3
+from datetime import datetime
 
 client = discord.Client()
 
@@ -270,6 +271,12 @@ async def on_message(message):
             await client.send_message(message.channel, resp)
 
 ##########################################
+###############Event Duration#############
+##########################################
+    if message.content.startswith(',time'):
+        datetime.utcnow()
+
+##########################################
 ###############Credit System##############
 ##########################################
 
@@ -289,11 +296,6 @@ async def on_message(message):
     #         if message.content.startswith(',sceptile'):
     #             await client.send_message(message.channel,"You win!")
     #             game=False
-
-
-async def newGame(message):
-    if message.content.startswith(',function'):
-        await client.send_message(message.channel, "Correct Function")
 
 
 
