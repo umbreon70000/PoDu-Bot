@@ -276,8 +276,7 @@ async def on_message(message):
     if message.content.startswith(',myname'):
         myname = message.author.name
         await client.send_message(message.channel, myname)
-    if message.content.startswith(',test'):
-        await client.send_message(message.channel, "Test2")
+
 
     # if message.content.startswith(',guess'):
     #     game=True
@@ -290,6 +289,11 @@ async def on_message(message):
     #         if message.content.startswith(',sceptile'):
     #             await client.send_message(message.channel,"You win!")
     #             game=False
+
+
+async def newGame(message):
+    if message.content.startswith(',function'):
+        await client.send_message(message.channel, "Correct Function")
 
 
 
