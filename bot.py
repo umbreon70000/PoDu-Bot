@@ -18,9 +18,6 @@ async def on_message(message):
     ################
     ##### HELP #####
     ################
-    if message.content.startswith(',help'):
-        helpMsg = "Hello there."
-        await client.send_message(client.get_user_info(id), helpMsg)
 
     ##################
     ##### LEVELS #####
@@ -114,7 +111,7 @@ async def on_message(message):
     if message.content.startswith(',zekrom'):
         await client.send_message(message.channel, "`Fusion Bolt - Zekrom is usually used alongside Reshiram, Tapu Koko and Overdrive, and with these buffs, Zekrom has possibly the most powerful banishing move in Duel.`")
     if message.content.startswith(',raikou'):
-        await client.send_message(message.channel, "`Thunderous Blow - This Move is a fairly powerful Gold Move, especially when it is used with Tapu Koko. This move can also cause multiple Pokemon to become paralysed.`")
+        await client.send_message(message.channel, "`Thunderous Blow or Thunder - Thunderous Blow is a fairly powerful Gold Move, especially when it is used with Tapu Koko. This move can also cause multiple Pokemon to become paralysed. Thunder provides a very high damage output when used with Tapu Koko, which can beat many figures in meta.`")
     if message.content.startswith(',latios'):
         await client.send_message(message.channel, "`Luster Purge - Highest damage move.`")
     if message.content.startswith(',genesect'):
@@ -178,7 +175,17 @@ async def on_message(message):
     if message.content.startswith(',primarina'):
         await client.send_message(message.channel, "`Balloon Flight - This move prevents Primarina from being KO'd on its next turn, in other words, Primarina's next battle is a free battle.`")
     if message.content.startswith(',tapu-fini'):
-        await client.send_message(message.channel, "`Poni Wish or Dazzling Gleam - Poni Wish allows Fini to exclude a figure that your opponent may rely on, which usually gives you the advantage. Dazzling Gleam is a very weak move, however when used alongside Manaphy it can deal 99 damage which counters Mew, and its additional effect could also be useful sometimes.`")
+        await client.send_message(message.channel, "`Poni Wish - Poni Wish allows Fini to exclude a figure that your opponent may rely on, which usually gives you the advantage.`")
+    if message.content.startswith(',groudon'):
+        await client.send_message(message.channel, "`Smash - Highest damage move`")
+    if message.content.startswith(',metagross'):
+        await client.send_message(message.channel, "`Hyper Beam - This move has one of the highest damage outputs in the game. Even though it may sometimes give the opponent another turn, this move's power makes up for that.`")
+    if message.content.startswith(',lunala'):
+        await client.send_message(message.channel, "`Psychic - When this figure has reached the maximum amount of Clvls, this move will defeat most figures in meta, and will prevent it from being too weak to Gold moves.`")
+    if message.content.startswith(',scizor'):
+        await client.send_message(message.channel, "`Crushing Squeeze - This is the highest damage move, so has synergy with Steel Energy. Additionally, this move holds the best synergy with Scizor's ability.`")
+    if message.content.startswith(',magearna'):
+        await client.send_message(message.channel, "`Fleur Cannon - This is the highest damage move, therefore has good synergy with Steel Energy.`")
 
 #############################################
 ##################Funny Commands#############
