@@ -6,6 +6,11 @@ from datetime import datetime
 
 client = discord.Client()
 
+bot = commands.Bot(command_prefix=',', description='Pokemon Duel Bot')
+@bot.event
+async def cat():
+    await bot.say('Cat')
+
 @client.event
 async def on_ready():
     print("Logged in as")
@@ -190,16 +195,13 @@ async def on_message(message):
 #############################################
 ##################Funny Commands#############
 #############################################
-    if message.content.startswith(',heroz'):
-        await client.send_message(message.channel, "Don't mention those morons again")
     if message.content.startswith(',cosmo'):
         await client.send_message(message.channel, "Broken")
     if message.content.startswith(',car'):
         await client.send_message(message.channel, "Yes, I will provide pictures of cars for you soon Sfpm")
     if message.content.startswith(',food'):
         await client.send_message(message.channel, "If only Umbreon could type...")
-    if message.content.startswith(',4k'):
-        await client.send_message(message.channel, "R Clan requirement")
+
 
 ################################################
 ######################Games#####################
@@ -316,7 +318,6 @@ async def on_message(message):
     if message.content.startswith(',myname'):
         myname = message.author.name
         await client.send_message(message.channel, myname)
-
 
     # if message.content.startswith(',guess'):
     #     game=True
