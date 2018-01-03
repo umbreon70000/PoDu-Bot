@@ -6,11 +6,6 @@ from datetime import datetime
 
 client = discord.Client()
 
-bot = commands.Bot(command_prefix=',', description='Pokemon Duel Bot')
-@bot.event
-async def cat():
-    await bot.say('Cat')
-
 @client.event
 async def on_ready():
     print("Logged in as")
