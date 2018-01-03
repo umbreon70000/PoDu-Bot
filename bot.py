@@ -303,7 +303,10 @@ async def on_message(message):
         strUtc = str(newUtc)
         eventTime = '2018-01-04 07:59:00'
         FMT = '%Y-%m-%d %H:%M:%S'
-        tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
+        if eventTime > strUtc:
+            tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
+        else:
+            tdelta = "`There is currently no event.`"
         await client.send_message(message.channel, tdelta)
 
 ##########################################
