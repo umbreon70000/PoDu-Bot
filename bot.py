@@ -284,6 +284,10 @@ async def on_message(message):
             resp = "`It is not likely.`"
             await client.send_message(message.channel, resp)
 
+    if message.content.startswith(',howmany'):
+        amountHowMany = random.randint(0,100)
+        await client.send_message(message.channel, amountHowMany)
+
 ##########################################
 ###############Event Duration#############
 ##########################################
@@ -304,6 +308,19 @@ async def on_message(message):
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
         else:
             tdelta = "`There is currently no event.`"
+        await client.send_message(message.channel, tdelta)
+
+    if message.content.startswith(',month'):
+        utcTime = datetime.utcnow()
+        s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
+        newUtc = s[:-7] #Removing the milliseconds
+        strUtc = str(newUtc)
+        eventTime = '2018-01-31 14:59:59'
+        FMT = '%Y-%m-%d %H:%M:%S'
+        if eventTime > strUtc:
+            tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
+        else:
+            tdelta = "`Month reset.`"
         await client.send_message(message.channel, tdelta)
 
 ##########################################
