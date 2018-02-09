@@ -6,6 +6,7 @@ from datetime import datetime
 
 client = discord.Client()
 
+
 @client.event
 async def on_ready():
     print("Logged in as")
@@ -18,6 +19,13 @@ async def on_message(message):
     ################
     ##### HELP #####
     ################
+
+    ################
+    ##### INFO #####
+    ################
+if message.content.startswith(',infozapdos'):
+
+    await client.send_message(message.channel, "")
 
     ##################
     ##### LEVELS #####
@@ -32,7 +40,6 @@ async def on_message(message):
         await client.send_message(message.channel, "`Roar of Time - Highest damage move and counters Twin Dragons`")
     if message.content.startswith(',lugia'):
         await client.send_message(message.channel, "`Cyclone - Lugia's other moves are weak and are unable to compete with meta figures. Cyclone is a very powerful Purple Move, and its effect is also very strong`")
-    if message.content.startswith(',hooh'):
         await client.send_message(message.channel, "`Rainbow Wing - Ho-Oh is usually used for its ability, which revives figures in the PC. Rainbow Wing often will give it positional advantage, however sometimes it may do the opposite.`")
     if message.content.startswith(',tauros'):
         await client.send_message(message.channel, "`Take Down - The purple is also an option, however the purple allows the opponent to choose where to move, which could sometimes help them.`")
@@ -45,6 +52,7 @@ async def on_message(message):
     if message.content.startswith(',palkia'):
         await client.send_message(message.channel, "`Spacial Rend - Highest damage move and its effect can sometimes be useful.`")
     if message.content.startswith(',feraligatr'):
+        if message.content.startswith(',hooh'):
         await client.send_message(message.channel, "`Hydro Pump - This Pokemon will usually be used as an evolution from Crocnaw in a Water Deck, and this move's damage is extremely high with both of these buffs.`")
     if message.content.startswith(',darkrai'):
         await client.send_message(message.channel, "`Dark Void - This move works well with Darkrai's ability.`")
@@ -85,7 +93,6 @@ async def on_message(message):
     if message.content.startswith(',garchomp'):
         await client.send_message(message.channel, "`Double Flight - This move allows it to move around the Board quickly.`")
     if message.content.startswith(',empoleon'):
-        await client.send_message(message.channel, "`Ice Beam or Hydro Pump - I personally like to Freeze opposing figures using Empoleon, however Hydro Pump has a much higher damage output than Ice Beam, which is useful for Manaphy and Steel Decks.`")
     if message.content.startswith(',lucario'):
         await client.send_message(message.channel, "`Aura Sphere - This Pokemon will usually be used in a Steel Deck with Cobalion, so increasing Aura Sphere allows it to get a KO fairly easily, especially when this Pokemon is next to Cobalion.`")
     if message.content.startswith(',aggron'):
@@ -181,7 +188,7 @@ async def on_message(message):
     if message.content.startswith(',metagross'):
         await client.send_message(message.channel, "`Hyper Beam - This move has one of the highest damage outputs in the game. Even though it may sometimes give the opponent another turn, this move's power makes up for that.`")
     if message.content.startswith(',lunala'):
-        await client.send_message(message.channel, "`Psychic - When this figure has reached the maximum amount of Clvls, this move will defeat most figures in meta, and will prevent it from being too weak to Gold moves.`")
+        await client.send_message(message.channel, "`Moongeist Beam - Unlike Psychic, this move will still be able to send opposing Figures to the PC even when Lunala is affected by status. Moongeist Beam makes Lunala weaker to Gold, however it also prevents Lunala from being weak to Status.`")
     if message.content.startswith(',scizor'):
         await client.send_message(message.channel, "`Crushing Squeeze - This is the highest damage move, so has synergy with Steel Energy. Additionally, this move holds the best synergy with Scizor's ability.`")
     if message.content.startswith(',magearna'):
@@ -305,7 +312,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-02-05 07:59:00' #This is the time when the event ends, the one I change
+        eventTime = '2018-02-12 07:59:00' #This is the time when the event ends, the one I change
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
