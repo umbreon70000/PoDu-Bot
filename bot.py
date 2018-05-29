@@ -318,7 +318,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-04-30 14:59:59'
+        eventTime = '2018-05-31 14:59:59'
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
