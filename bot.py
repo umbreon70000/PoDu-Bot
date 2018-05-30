@@ -326,31 +326,19 @@ async def on_message(message):
             tdelta = "`Month reset.`"
         await client.send_message(message.channel, tdelta)
 
-        if message.content.startswith(',month'):
-            utcTime = datetime.utcnow()
-            s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
-            newUtc = s[:-7] #Removing the milliseconds
-            strUtc = str(newUtc)
-            eventTime = '2018-05-31 14:59:59'
-            FMT = '%Y-%m-%d %H:%M:%S'
-            if eventTime > strUtc:
-                tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
-            else:
-                tdelta = "`Month reset.`"
-            await client.send_message(message.channel, tdelta)
+    if message.content.startswith(',maint'):
+        utcTime = datetime.utcnow()
+        s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
+        newUtc = s[:-7] #Removing the milliseconds
+        strUtc = str(newUtc)
+        maintTime = '2018-06-01 08:00:00'
+        FMT = '%Y-%m-%d %H:%M:%S'
+        if maintTime > strUtc:
+            tdelta = datetime.strptime(maintTime, FMT) - datetime.strptime(strUtc, FMT)
+        else:
+            tdelta = "`There is no maintenance.`"
+        await client.send_message(message.channel, tdelta)
 
-        if message.content.startswith(',maint'):
-            utcTime = datetime.utcnow()
-            s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
-            newUtc = s[:-7] #Removing the milliseconds
-            strUtc = str(newUtc)
-            maintTime = '2018-06-01 08:00:00'
-            FMT = '%Y-%m-%d %H:%M:%S'
-            if maintTime > strUtc:
-                tdelta = datetime.strptime(maintTime, FMT) - datetime.strptime(strUtc, FMT)
-            else:
-                tdelta = "`There is no maintenance."
-            await client.send_message(message.channel, tdelta)
 
 ##########################################
 ###############Credit System##############
