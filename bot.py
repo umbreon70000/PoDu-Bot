@@ -2,9 +2,15 @@ import discord
 import asyncio
 import random
 import sqlite3
+from discord.ext import commands
 from datetime import datetime
 
 client = discord.Client()
+bot = commands.Bot(command_prefix='!', description='Pokemon Duel Bot')
+
+@bot.command()
+async def test(ctx, a: string):
+    await ctx.send(string)
 
 @client.event
 async def on_ready():
@@ -331,9 +337,10 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
+        maintStart = '2018-06-01 02:00:00'
         maintTime = '2018-06-01 08:00:00'
         FMT = '%Y-%m-%d %H:%M:%S'
-        if maintTime > strUtc:
+        if maintStartTime > strUtc:
             tdelta = datetime.strptime(maintTime, FMT) - datetime.strptime(strUtc, FMT)
         else:
             tdelta = "`There is no maintenance.`"
@@ -347,6 +354,7 @@ async def on_message(message):
     if message.content.startswith(',myname'):
         myname = message.author.name
         await client.send_message(message.channel, myname)
+
 
     # if message.content.startswith(',guess'):
     #     game=True
