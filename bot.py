@@ -6,11 +6,11 @@ from discord.ext import commands
 from datetime import datetime
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='!', description='Pokemon Duel Bot')
-
-@bot.command()
-async def test(ctx, a: string):
-    await ctx.send(string)
+# bot = commands.Bot(command_prefix='!', description='Pokemon Duel Bot')
+#
+# @bot.command()
+# async def test(ctx, a: string):
+#     await ctx.send(string)
 
 @client.event
 async def on_ready():
