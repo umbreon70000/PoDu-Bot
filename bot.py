@@ -340,6 +340,9 @@ async def on_message(message):
             tdelta = "`There is no maintenance.`"
         await client.send_message(message.channel, tdelta)
 
+    if message.content.startswith(',randomtest'):
+        rewards = "`Test 1 - A \n Test 2 - B \n Test 3 - C`"
+
 
 ##########################################
 ###############Credit System##############
