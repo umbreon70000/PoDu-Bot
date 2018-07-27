@@ -342,6 +342,7 @@ async def on_message(message):
 
     if message.content.startswith(',randomtest'):
         rewards = "`Test 1 - A \n Test 2 - B \n Test 3 - C`"
+        await client.send_message(message.channel, tdelta)
 
 
 ##########################################
