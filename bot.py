@@ -756,29 +756,30 @@ async def food(member: discord.Member):
 
 @bot.command()
 async def month():
-     utcTime = datetime.utcnow()
-            s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
-            newUtc = s[:-7] #Removing the milliseconds
-            strUtc = str(newUtc)
-            eventTime = '2018-08-31 14:59:59'
-            FMT = '%Y-%m-%d %H:%M:%S'
-            if eventTime > strUtc:
-                tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
-            else:
-                tdelta = "`Month reset.`"
-            await client.send_message(message.channel, tdelta)
+    utcTime = datetime.utcnow()
+    s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
+    newUtc = s[:-7] #Removing the milliseconds
+    strUtc = str(newUtc)
+    eventTime = '2018-08-31 14:59:59'
+    FMT = '%Y-%m-%d %H:%M:%S'
+    if eventTime > strUtc:
+        tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
+    else:
+        tdelta = "`Month reset.`"
+    await client.send_message(message.channel, tdelta)
 
 @bot.command()
 async def event():
-            utcTime = datetime.utcnow()
-            s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
-            newUtc = s[:-7] #Removing the milliseconds
-            strUtc = str(newUtc)
-            eventTime = '2018-08-07 07:59:00' #This is the time when the event ends, the one I change
-            FMT = '%Y-%m-%d %H:%M:%S'
-            if eventTime > strUtc:
-                tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
-            else:
-                tdelta = "`There is currently no event.`"
-            await client.send_message(message.channel, tdelta)
+    utcTime = datetime.utcnow()
+    s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
+    newUtc = s[:-7] #Removing the milliseconds
+    strUtc = str(newUtc)
+    eventTime = '2018-08-07 07:59:00' #This is the time when the event ends, the one I change
+    FMT = '%Y-%m-%d %H:%M:%S'
+    if eventTime > strUtc:
+        tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
+    else:
+        tdelta = "`There is currently no event.`"
+    await client.send_message(message.channel, tdelta)
+
 client.run('Mzg5MDAxNzU0MDMwNzY4MTMw.DSxZTA.08-i9eiBCO0Y2E3JTvVajQY1mO4')
