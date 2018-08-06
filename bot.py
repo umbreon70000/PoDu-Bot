@@ -196,7 +196,7 @@ async def on_message(message):
         await client.send_message(message.channel, "Test")
     if message.content.startswith('test2'):
         await client.send_message(message.channel, "Test2")
-
+#
 
 
 ################################################
