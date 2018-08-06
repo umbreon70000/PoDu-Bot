@@ -190,14 +190,12 @@ async def on_message(message):
 #############################################
 ##################Funny Commands#############
 #############################################
-    if message.content.startswith(',cosmo'):
-        await client.send_message(message.channel, "Broken")
-    if message.content.startswith(',car'):
-        await client.send_message(message.channel, "Yes, I will provide pictures of cars for you soon Sfpm")
     if message.content.startswith(',food'):
         await client.send_message(message.channel, "If only Umbreon could type...")
     if message.content.startswith(',test'):
         await client.send_message(message.channel, "Test")
+    if message.content.startswith('test2'):
+        await client.send_message(message.channel, "Test2")
 
 
 
