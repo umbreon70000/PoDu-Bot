@@ -327,9 +327,9 @@ async def on_message(message):
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
         maintStart = '2018-08-16 19:00:00'
-        maintTime = '2018-08-06 21:00:00'
+        maintTime = '2018-08-16 21:00:00'
         FMT = '%Y-%m-%d %H:%M:%S'
-        if maintStart > strUtc:
+        if maintStartTime > strUtc:
             tdelta = datetime.strptime(maintTime, FMT) - datetime.strptime(strUtc, FMT)
         else:
             tdelta = "`There is no maintenance.`"
