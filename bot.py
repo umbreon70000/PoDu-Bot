@@ -192,8 +192,8 @@ async def on_message(message):
 #############################################
     if message.content.startswith(',food'):
         await client.send_message(message.channel, "If only Umbreon could type...")
-    if message.content.startswith(',test'):
-        await client.send_message(message.channel, "Test")
+    if message.content.startswith(',rudy'):
+        await client.send_message(message.channel, "If only Neek could type...")
 
 
 ################################################
@@ -300,7 +300,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-08-29 01:59:00' #This is the time when the event ends, the one I change
+        eventTime = '2018-09-10 07:59:00' #This is the time when the event ends, the one I change
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
@@ -313,7 +313,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-08-31 14:59:59'
+        eventTime = '2018-09-30 14:59:59'
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
