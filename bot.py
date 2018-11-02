@@ -300,7 +300,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-10-29 07:59:00' #This is the time when the event ends, the one I change
+        eventTime = '2018-11-06 07:59:00' #This is the time when the event ends, the one I change
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
@@ -313,7 +313,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-10-31 14:59:59'
+        eventTime = '2018-12-03 02:00:00'
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
