@@ -344,6 +344,10 @@ async def on_message(message):
         myname = message.author.name
         await client.send_message(message.channel, myname)
 
-
+    if message.content.startswith(',match'):
+        memberA = random.randint(0,2)+1
+        memberB = random.randint(0,2)+1
+        message = "Member ", memberA, " from Team A is facing ", memberB, " from Team B"
+        await client.send_message(message.channel, message)
 
 client.run('Mzg5MDAxNzU0MDMwNzY4MTMw.DSxZTA.08-i9eiBCO0Y2E3JTvVajQY1mO4')
