@@ -286,9 +286,6 @@ async def on_message(message):
         amountHowMany = random.randint(0,100)
         await client.send_message(message.channel, amountHowMany)
 
-    if message.content == 'test':
-        await client.send_message(message.channel, "Test")
-
 ##########################################
 ###############Event Duration#############
 ##########################################
