@@ -252,34 +252,31 @@ async def on_message(message):
 
 
     if message.content.startswith(',ask'):
-        number = random.randint(0,8)
+        number = random.randint(0,7)
         resp = ""
         if number == 0:
-            resp = "`Definitely!`"
+            resp = "`It is certain`"
             await client.send_message(message.channel, resp)
         if number == 1:
-            resp = "`Not a chance.`"
+            resp = "`It is decidedly so`"
             await client.send_message(message.channel, resp)
         if number == 2:
-            resp = "`Not looking good.`"
+            resp = "`Without a doubt`"
             await client.send_message(message.channel, resp)
         if number == 3:
-            resp = "`Positive outlook.`"
+            resp = "`Outlook not so good`"
             await client.send_message(message.channel, resp)
         if number == 4:
-            resp = "`I have no idea. Ask again.`"
+            resp = "`You may rely on it`"
             await client.send_message(message.channel, resp)
         if number == 5:
-            resp = "`Probably.`"
+            resp = "`Don’t count on it`"
             await client.send_message(message.channel, resp)
         if number == 6:
-            resp = "`Yes.`"
+            resp = "`My sources say no`"
             await client.send_message(message.channel, resp)
         if number == 7:
-            resp = "`No.`"
-            await client.send_message(message.channel, resp)
-        if number == 8:
-            resp = "`It is not likely.`"
+            resp = "`Very doubtful`"
             await client.send_message(message.channel, resp)
 
     if message.content.startswith(',howmany'):
@@ -300,7 +297,7 @@ async def on_message(message):
         s = utcTime.strftime('%Y-%m-%d %H:%M:%S.%f')
         newUtc = s[:-7] #Removing the milliseconds
         strUtc = str(newUtc)
-        eventTime = '2018-11-06 07:59:00' #This is the time when the event ends, the one I change
+        eventTime = '2019-06-26 07:59:00' #This is the time when the event ends, the one I change
         FMT = '%Y-%m-%d %H:%M:%S'
         if eventTime > strUtc:
             tdelta = datetime.strptime(eventTime, FMT) - datetime.strptime(strUtc, FMT)
